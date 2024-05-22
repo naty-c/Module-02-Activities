@@ -1,0 +1,120 @@
+* {
+    font-family: "VT323", monospace;
+    margin: 10px;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: #8EAEBD;
+    color: #CF6766;
+}
+
+.journey {
+    background-color: #cecece;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.typing {
+    display: inline;
+    position: relative;
+}
+
+.typing:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 1em;
+    background-color: #CF6766;
+    animation: blink 1s infinite;
+}
+
+.level-up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.attributes, .quests {
+    flex-grow: 1;
+    padding: 10px;
+    border: 3px solid #30415D;
+    border-radius: 10px;
+    background-color: #30415D;
+    margin: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.attributes:hover, .quests:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.attributes h2, .quests h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #CF6766;
+    color: #30415D;
+    border-radius: 10px;
+}
+
+.stars-list i {
+    display: inline-block;
+    width: 1rem;
+    margin-right: 0.5rem;
+    padding-left: 0;
+    color: gold;
+    text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 50px gold;
+}    
+
+.stars-list li {
+    margin: 0 1rem;
+    list-style: none;
+    font-size: 1.1rem;
+    color: #CF6766;
+    height: 10vh;
+}
+
+.quests-list li {
+    margin: 0 2rem;
+    font-size: 1.1rem;
+    color: #CF6766;
+    line-height: 1.5rem;
+    height: 10vh;
+}
+
+a {
+    color: #CF6766;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+a:hover {
+    color: #30415D;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
