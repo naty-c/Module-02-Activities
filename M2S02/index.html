@@ -11,26 +11,31 @@
 
 </head>
 <body>
-    <h1>Hop on the Web Development voyage</h1>
-    <p>Welcome, adventurer! Today, we're setting off on an exciting journey through the vast landscape of web development. Fasten your seatbelt as we explore the essential landmarks that will guide you from a novice traveler to a seasoned web developer. Our itinerary includes visits to the primal realms of HTML, the stylish wonders of CSS, and the dynamic world of JavaScript. Let’s begin this unforgettable tour!</p>
+    <div class="content">
+    <h1 class="title">Hop on the Web Development voyage</h1>
+    <p class="description">Welcome, adventurer! Today, we're setting off on an exciting journey through the vast landscape of web development. Fasten your seatbelt as we explore the essential landmarks that will guide you from a novice traveler to a seasoned web developer. Our itinerary includes visits to the primal realms of HTML, the stylish wonders of CSS, and the dynamic world of JavaScript. Let’s begin this unforgettable tour!</p>
     <ul>
         <li><i class="fa-solid fa-location-pin"></i><strong>1º HTML:</strong> the starting point of our journey. Here, you'll learn how to structure your web pages, creating the backbone of your online presence.</li>
         <li><i class="fa-solid fa-location-pin"></i><strong>2º CSS:</strong> our next stop will introduce you to the art of styling. Discover how to add colors, layouts, and designs that make your websites visually appealing.</li>
         <li><i class="fa-solid fa-location-pin"></i><strong>3º JavaScript:</strong> finally, we dive into the dynamic depths of JS, where you'll bring your web pages to life with interactive elements and engaging user experiences.</li>
     </ul>
-    <form>
+    </div>
+    <div class="form-container">
+    <form class="fields">
         <fieldset>
             <legend>Start your trip!</legend>
             <label for="name">Name:</label>
-            <input type="text" id="name">
+            <input type="text" id="name" required>
             <label for="email">Email:</label>
-            <input type="text" id="email">
+            <input type="text" id="email" required>
             <label for="message">Message:</label>
-            <textarea name="message" rows="10" cols="30"></textarea>
-            <button type="button"><i class="fa-solid fa-paper-plane"></i>Send!</button>
-            <button type="button"><i class="fa-solid fa-repeat"></i>Clean</button>
+            <textarea id="message" name="message" rows="10" cols="30" required></textarea>
+            <button type="button" onclick="sendForm()"><i class="fa-solid fa-paper-plane"></i>Send!</button>
+            <button type="button" onclick="cleanForm()"><i class="fa-solid fa-repeat"></i>Clean</button>
+            <div id="form-status"></div>
         </fieldset>
     </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
