@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Natália Cagnani's Profile</title>
+
+    <!-- Metadata Open Graph -->
+    <meta property="og:title" content="My Profile - Natália Cagnani">
+    <meta property="og:description" content="DEV in training through HTML, CSS, JavaScript, Node.js, and React.">
+    <meta property="og:image" content="./assets/profile-img-natalia-cagnani.jpg">
+    <!-- <meta property="og:url" content="URL for my profile page"> -->
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Basic Metadata -->
+    <meta name="description" content="Natália Cagnani's Web Development Profile">
+    <meta name="keywords" content="Profile, Web Development, HTML, CSS, JavaScript">
+    <meta name="author" content="Natália Cagnani">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/88bfaae0e7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Natália Cagnani</h1>
+    </header>
+    <main>
+        <section id="profile">
+            <div class="profile-bg"></div>
+            <img src="./assets/profile-img-natalia-cagnani.jpg" alt="Profile Image for Natália Cagnani">
+            <h2>About Me</h2>
+            <h3 class="profession"><span></span></h3>
+            <p>Hello! I'm a detailed-oriented DEV in training, pursuing all the knowledge to build user-friendly experiences, engaging web applications, and handy apps. Right now, I'm in a quest through HTML, CSS, JavaScript, Node.js, and React.</p>
+        </section>
+
+        <section id="skills">
+            <hr>
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Web Development</li>
+                <li>UX/UI Design</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <hr>
+            <h2>My Projects</h2>
+            <div class="carousel">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel-container">
+                    <ul class="carousel-card-list">
+                        <li class="carousel-card">
+                            <img class="carousel-image" src="/EX02/assets/simple-web-page.png" alt="Web Page Design">
+                            <h3>Web Page</h3>
+                            <p>Simple website design with a few animations.</p>
+                        </li>
+                        <li class="carousel-card">
+                            <img class="carousel-image" src="/EX02/assets/contact-form.png" alt="Contact Form">
+                            <h3>Contact Form</h3>
+                            <p>Simple contact form with JS event attributes.</p>
+                        </li>
+                        <li class="carousel-card">
+                            <img class="carousel-image" src="/EX02/assets/simple-calculator.png" alt="Simple Calculator Interface">
+                            <h3>Calculator</h3>
+                            <p>Simple calculator with basic math operations.</p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <p><i class="fa-regular fa-copyright"></i> 2024 Made with <i class="fa-solid fa-code"></i> & <i class="fa-solid fa-mug-hot"></i> by <a href="https://github.com/naty-c" target="_blank"><span>Natália Cagnani</span></a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>
