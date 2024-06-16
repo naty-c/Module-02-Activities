@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix [Clone]</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="https://kit.fontawesome.com/88bfaae0e7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Menu -->
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li><a aria-label="Go to about" href="#about">About</a></li>
+                    <li><a aria-label="Go to trailer" href="#trailer">Trailer</a></li>
+                    <li><img id="logo" src="./img/netflix-logo.png" alt="logo Netflix"></li>
+                    <li><a aria-label="Go to actors" href="#actors">Actors</a></li>
+                    <li><a aria-label="Go to ratings" href="#ratings">Ratings</a></li>         
+                </ul>                
+            </div>
+        </div>
+
+        <!-- Left Content -->
+            <div class="row ph-30 gap-150 pt-50">
+                <div class="info_serie">
+                    <h1 class="title">Supernatural</h1>
+                    <h2 class="gender m-t-14 m-b-28">Drama, Mistery, Terror</h2>
+                    <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id lectus id mauris porttitor rutrum sit amet vel augue. Nam varius efficitur sem eu varius. Donec ut diam est. Proin venenatis sodales lorem fermentum tempus. Nulla lobortis suscipit neque. <a class="more-info" href="#">Read more</a></span>
+    
+                    <div class="row m-t-56">
+                        <span>Season 1</span>
+                        <img class="left-arrow" src="./img/chevron-left.png" alt="left-arrow">
+                        <img class="right-arrow" src="./img/chevron-right.png" alt="right-arrow">
+                    </div>
+    
+                    <div class="episodes">
+                        <div class="card-episode" onclick="handleEpisodeClick(1)"><i class="fa-regular fa-circle-play"></i></div>
+                        <div class="card-episode" onclick="handleEpisodeClick(2)"><i class="fa-regular fa-circle-play"></i></div>
+                        <div class="card-episode" onclick="handleEpisodeClick(3)"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
+                </div>
+
+        <!-- Right Content -->
+                <img class="poster" src="./img/poster.png" alt="Supernatural Poster">
+                    
+            </div>
+
+            <div class="social">
+                <a href="#"><img id="instagram" src="./img/instagram.png" alt="Instagram Icon"></a>
+                <a href="#"><img id="facebook" src="./img/facebook.png" alt="Facebook Icon"></a>
+                <a href="#"><img id="twitter" src="./img/twitter.png" alt="Twitter Icon"></a>
+            </div>
+            <div id="tooltip" class="tooltip"></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-content">
+            <div class="footer-info">
+                <span>2005</span>
+                <span>|</span>
+                <span>Season 1</span>
+                <span>|</span>
+                <span>IMDB 9.5</span>
+            </div>
+        </div> 
+
+        <script src="script-social.js"></script>
+        <script src="script-menu.js"></script>
+        <script src="script-episodes.js"></script>
+    </body>
+</html>
