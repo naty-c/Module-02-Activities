@@ -16,11 +16,10 @@ This mini project was created for Module 2 of #FuturoDEV course from FMT. It's a
 
 ### Sample
 
-Before
-
-<img src="/assets/02-packlist-project-screen.png">
+<h4 align="center">
+Before<br><br>
+<img src="./assets/packlist-project-screen.png">
 <br><br>
 
-After
-
-<img src="/assets/04-packlist-project-screen.png">
+After<br><br>
+<img src="./assets/packlist-project-screen-with-list.png"></h4>
