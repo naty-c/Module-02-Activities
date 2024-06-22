@@ -23,6 +23,26 @@ function loadItems() {
 function createListItem(item) {
     const li = document.createElement('li');
     li.textContent = item;
+
+    // Adding a button for each item to clean by item, not only by list
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    deleteButton.classList.add('del-item-btn');
+    deleteButton.addEventListener('click', () => {
+    
+    itemList.removeChild(li); // Remove the icon from DOM
+    
+    // Update the localStorage too when an item is deleted
+    const storedItems = localStorage.getItem('my-trip-packlist');
+    if (storedItems) {
+        const packList = JSON.parse(storedItems);
+        const updatedPackList = packList.filter(packItem => packItem !== item);
+        localStorage.setItem('my-trip-packlist', JSON.stringify(updatedPackList));
+    }
+});
+    
+    li.appendChild(deleteButton);
+    
     return li;
 }
 
@@ -55,15 +75,15 @@ cleanButton.addEventListener('click', cleanItems);
 
 // Accessibility to add and clean items using the 'enter' key
 itemInput.addEventListener('keydown', (event) => {
-    event.preventDefault();
     if (event.key === 'Enter') {
+        event.preventDefault();
         addItem();
     }
 });
 
 document.addEventListener('keydown', (event) => {
-    event.preventDefault();
     if (event.key === 'Enter' && document.activeElement === cleanButton) {
+        event.preventDefault();
         cleanItems();
     }
 });
