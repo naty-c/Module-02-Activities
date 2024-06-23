@@ -56,6 +56,7 @@ header h1 {
     }
 
 .bag-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -149,9 +150,9 @@ header h1 {
 }
 
 .clean-btn {
+    position: relative;
     display: flex;
     padding: 2px 4px;
-    font-size: 1rem;
     color:#A64F3C;
     border: 2px solid #F2E0C9;
     border-radius:4px;
@@ -159,13 +160,27 @@ header h1 {
     overflow: hidden;
     gap: 5px;
     margin-right: 40px;
+    font-size: 1rem;
 }
 
 .clean-btn:hover {
     background: #F2E0C9;
     color: #A64F3C;
     box-shadow: 0 0 10px #F2E0C9, 0 0 40px #F2E0C9, 0 0 70px #F2E0C9;
-  }
+}
+
+.clean-btn .fa-spin {
+    animation: spin 2s infinite linear; 
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 #packlist li {
     display: flex;
@@ -176,6 +191,22 @@ header h1 {
     color: #F2E0C9;
     text-align: left;
     font-family: "Playwrite PL", cursive;
+}
+
+.edit-item-btn {
+    background: none;
+    border: none;
+    color: #F2E0C9;
+    font-size: 18px;
+    cursor: pointer;
+    font-size: 1.5rem; 
+    margin-left: auto;
+    margin-right: 18px;
+}
+
+.edit-item-btn:hover {
+    color: #BAD9C2;
+    transform: scale(1.2);
 }
 
 .del-item-btn {
@@ -189,6 +220,55 @@ header h1 {
 
 .del-item-btn:hover {
     filter: opacity(50%);
+}
+
+.expand-icon {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: none;
+    color: #F2E0C9;
+    font-size: 1.2rem;
+    align-items: center;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+.expand-icon i {
+    margin-right: 5px;
+}
+
+.bag-content:hover .expand-icon {
+    display: flex; /* Show the icon when the mouse is over this div */
+}
+
+.bag-items-expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.bag-items-expanded ul {
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.bag-items-expanded li {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #F2E0C9;
+    border-bottom: 1px solid #F2E0C9; 
 }
 
 .news {
