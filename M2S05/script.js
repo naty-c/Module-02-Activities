@@ -1,6 +1,4 @@
 const itemList = document.getElementById('packlist');
-const addButton = document.getElementById('add-item-btn');
-const cleanButton = document.getElementById('clean-list-btn');
 const itemInput = document.getElementById('item-input');
 
 // Retrieve and show items from localStorage
@@ -101,67 +99,9 @@ function cleanItems() {
 
 loadItems();
 
-// Event listeners for the buttons 'add' and 'clean'
-addButton.addEventListener('click', addItem);
-cleanButton.addEventListener('click', cleanItems);
-
-// Accessibility to add and clean items using the 'enter' key
-itemInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        addItem();
-    }
-});
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' && document.activeElement === cleanButton) {
-        event.preventDefault();
-        cleanItems();
-    }
-});
-
 // Refresh checklist every second
 setInterval(loadItems, 1000);
 
 loadItems();
 
-
-// Event listeners for the buttons 'add' and 'clean'
-addButton.addEventListener('click', addItem);
-cleanButton.addEventListener('click', cleanItems);
-
-// Event listeners for 'enter' when using the keyboard
-itemInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        addItem();
-    }
-});
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' && document.activeElement === cleanButton) {
-        event.preventDefault();
-        cleanItems();
-    }
-});
-
-// Event listeners for list expansion
-const packListContainer = document.getElementById('bag-items');
-
-packListContainer.addEventListener('click', function() {
-    this.classList.toggle('bag-items-expanded');
-});
-
-// Animation for the clean button
-const buttonSpin = document.querySelector('.clean-btn');
-
-buttonSpin.addEventListener('mouseenter', () => {
-    const icon = buttonSpin.querySelector('.fa-arrow-rotate-right');
-    icon.classList.add('fa-spin');
-});
-
-buttonSpin.addEventListener('mouseleave', () => {
-    const icon = buttonSpin.querySelector('.fa-arrow-rotate-right');
-    icon.classList.remove('fa-spin');
-});
-  
+export { loadItems, createListItem, addItem, cleanItems, itemInput };

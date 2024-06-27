@@ -2,7 +2,7 @@
 
 ## Travel Packing List 🧳 🛫
 
-This mini project was created for Module 2 of #FuturoDEV course from FMT. It's a simple list using a baggage format to add items before packing for a trip. 
+This mini project was created for Module 2 of #FuturoDEV course from FMT. It's a simple list using a baggage format to add items before packing for a trip, including the option to expand the bag when the list is longer. 
 
 ---
 

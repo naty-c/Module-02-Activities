@@ -33,11 +33,15 @@
                 <strong>Packing:</strong>
                 <button id="clean-list-btn" class="clean-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
             </div>
-            <div id="bag-items" class="bag-content">
-                <div class="expand-icon"><i class="fa-solid fa-expand"></i>Click to expand</div>
+            <div id="bag-items">
+                <div id="expand-icon"><i class="fa-solid fa-expand"></i>Expand the bag</div>
             <ul id="packlist">
                 <!-- Insert the items you need to pack for your trip -->
             </ul>
+            </div>
+            <div id="bag-items-expanded">
+                <div id="compress-icon"><i class="fa-solid fa-compress"></i>Close expander</div>
+                <!-- The ul will be moved here when expanded -->
             </div>
         </section>
     </main>
@@ -55,7 +59,9 @@
         <p><i class="fa-regular fa-copyright"></i> 2024 Made with <i class="fa-solid fa-code"></i> & <i class="fa-solid fa-mug-hot"></i> by <a href="https://github.com/naty-c" target="_blank"><span>Natália Cagnani</span></a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script type="module" src="script.js"></script>
+    <script type="module" src="events.js"></script>
     <script src="apinews.js"></script>
 </body>
 </html>

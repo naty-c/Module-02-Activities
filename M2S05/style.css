@@ -53,28 +53,6 @@ header h1 {
     min-height: 50vh;
     max-height: 70vh;
     transition: height 0.3s ease;
-    }
-
-.bag-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto; 
-}
-
-.bag-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.bag-content::-webkit-scrollbar-thumb {
-    background-color: #F2E0C9;
-    border-radius: 4px;
-}
-
-.bag-content::-webkit-scrollbar-thumb:hover {
-    background-color: #BAD9C2;
 }
 
 .baggage-bg {
@@ -182,6 +160,29 @@ header h1 {
     }
 }
 
+#bag-items,
+#bag-items-expanded {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; 
+}
+
+#bag-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+#bag-items::-webkit-scrollbar-thumb {
+    background-color: #F2E0C9;
+    border-radius: 4px;
+}
+
+#bag-items::-webkit-scrollbar-thumb:hover {
+    background-color: #BAD9C2;
+}
+
 #packlist li {
     display: flex;
     align-items:center;
@@ -222,29 +223,27 @@ header h1 {
     filter: opacity(50%);
 }
 
-.expand-icon {
+#expand-icon,
+#compress-icon {
     position: fixed;
-    bottom: 100px;
+    bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
     display: none;
     color: #F2E0C9;
-    font-size: 1.2rem;
+    font-size: 1rem;
     align-items: center;
     opacity: 0.5;
     z-index: 1000;
 }
 
-.expand-icon i {
+#expand-icon i,
+#compress-icon i {
     margin-right: 5px;
 }
 
-.bag-content:hover .expand-icon {
-    display: flex; /* Show the icon when the mouse is over this div */
-}
-
-.bag-items-expanded {
+#bag-items-expanded {
     position: fixed;
     top: 0;
     left: 0;
@@ -252,19 +251,19 @@ header h1 {
     height: 100%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.8); 
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
 }
 
-.bag-items-expanded ul {
+#bag-items-expanded ul {
     max-width: 90%;
     max-height: 90%;
     overflow-y: auto;
 }
 
-.bag-items-expanded li {
+#bag-items-expanded li {
     padding: 10px;
     font-size: 1.2rem;
     color: #F2E0C9;
@@ -370,8 +369,11 @@ header h1 {
     }
 
     .news {
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 50px;
         right: 33px;
-        bottom: 10px;
+        bottom: 0;
     }
 }
 
@@ -403,7 +405,10 @@ header h1 {
     }
 
     .news {
-        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 50px;
+        bottom: 0;
     }
 }
 
