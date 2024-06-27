@@ -17,9 +17,20 @@ This mini project was created for Module 2 of #FuturoDEV course from FMT. It's a
 ### Sample
 
 <h4 align="center">
-Before<br><br>
+Before</h4>
 <img src="./assets/packlist-project-screen.png">
-<br><br>
+<br>
 
-After<br><br>
+<h4 align="center">
+After</h4>
 <img src="./assets/packlist-project-screen-with-list.png"></h4>
+<br>
+
+<h4 align="center">
+More options</h4>
+<img src="./assets/packlist-project-screen-with-scroll-and-more-buttons.png"></h4>
+<br>
+
+<h4 align="center">
+List expanded</h4>
+<img src="./assets/packlist-project-screen-with-list-expanded.png"></h4>

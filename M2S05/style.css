@@ -192,6 +192,7 @@ header h1 {
     color: #F2E0C9;
     text-align: left;
     font-family: "Playwrite PL", cursive;
+    gap: 5px;
 }
 
 .edit-item-btn {
